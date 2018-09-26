@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'item'
-    label: 'Item'
-    folder: 'src/pages/items'
+  - name: 'music'
+    label: 'Music'
+    folder: 'src/pages/music'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -24,9 +24,9 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
 
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: 'tour'
+    label: 'Tour'
+    folder: 'src/pages/tour'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:

@@ -6,7 +6,7 @@ import './all.sass';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Hyeran Lee Art">
+    <Helmet title="Steve Stacey & the Stump Splitters">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" />
 
       <script

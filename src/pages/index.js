@@ -6,16 +6,16 @@ import Layout from '../components/Layout';
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: dates } = data.allMarkdownRemark;
 
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+              <h1 className="has-text-weight-bold is-size-2">Tour Dates</h1>
             </div>
-            {posts.map(({ node: post }) => (
+            {dates.map(({ node: post }) => (
               <div
                 className="content"
                 style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
                   <br />
                   <br />
                   <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
+                    View on Google Maps →
                   </Link>
                 </p>
               </div>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "item-page" } } }
+      filter: { frontmatter: { templateKey: { eq: "tour-date" } } }
     ) {
       edges {
         node {
